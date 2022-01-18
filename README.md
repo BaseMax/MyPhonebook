@@ -10,7 +10,7 @@ PUT IMAGES...
 
 ## Authors
 
-- **HTML/CSS:** Muhbab
+- **HTML/CSS:** Muhab
 - **JS/Database:** Max Base
 
 © Copyright 2021, Max Base
