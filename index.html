@@ -19,8 +19,8 @@
 <body>
     <!-- ======START NAVGITION ======  -->
 
-    <nav class="bg-white  border-gray-200 px-2 sm:px-4 py-2.5 rounded ">
-        <div class="md:container flex flex-wrap justify-between items-center mx-auto">
+    <nav class="bg-white  border-gray-200 px-4 md:px-10 py-2.5 rounded ">
+        <div class="flex flex-wrap justify-between items-center mx-auto">
             <a href="#" class="flex">
                 <svg class="mr-3 h-7 w-7" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24">
                     <path
@@ -43,7 +43,7 @@
                         clip-rule="evenodd"></path>
                 </svg>
             </button>
-            <div class="hidden w-full md:block md:w-auto" id="mobile-menu">
+            <div class="hidden w-full md:table-cell md:w-auto" id="mobile-menu">
                 <ul class="flex flex-col mt-4 md:flex-row md:space-x-8 md:mt-0 md:text-sm md:font-medium">
                     <li class="md:hover:bg-blue-500 md:hover:text-white hover:rounded  hover:bg-gray-100  p-2 group md:w-24 flex md:justify-center">
                         <a href="#"
@@ -51,7 +51,7 @@
                     </li>
                     <li class="md:hover:bg-blue-500 md:hover:text-white hover:rounded hover:bg-gray-100  p-2 group md:w-24 flex md:justify-center">
                         <a href="#"
-                            class="block py-2 pr-4 pl-3 text-gray-600 md:group-hover:text-white    ">Contacts</a>
+                            class="block py-2 pr-4 pl-3 text-gray-600 md:group-hover:text-white">Contacts</a>
                     </li>
 
 
@@ -74,7 +74,7 @@
 
                 <div class="relative mx-auto  text-gray-600">
                     <input
-                        class="border-2 border-gray-300 bg-white h-10  px-5 pr-16 rounded-lg text-sm focus:outline-none"
+                        class=" border-gray-300 bg-white h-10  px-5 pr-16 rounded-lg text-sm focus:outline-none"
                         type="search" name="search" placeholder="Search">
                     <button type="submit" class="absolute right-0 top-0 mt-3 mr-4">
                         <svg class="text-gray-600 h-4 w-4 fill-current" xmlns="http://www.w3.org/2000/svg"
@@ -140,7 +140,7 @@
                 </div>
                 <!-- Modal body -->
                 <div class="p-6 space-y-6">
-                    <form class="w-full max-w-lg">
+                    <form class="w-full">
                         <div class="flex flex-wrap -mx-3 mb-6">
                             <div class="w-full md:w-1/2 px-3 mb-6 md:mb-0">
                                 <label for="grid-firstname" class="block mb-2 text-sm font-medium text-gray-900">First
@@ -200,7 +200,8 @@
         <div class="relative px-4 w-full max-w-md h-full md:h-auto">
 
             <div class="relative bg-white rounded-lg shadow dark:bg-gray-700">
-                <div class="flex justify-end p-2">
+                <div class="flex justify-between items-start p-5 rounded-t ">
+                    <h3 class="text-xl font-medium text-gray-900 dark:text-white">Filters</h3>
                     <button type="button"
                         class="text-gray-400 bg-transparent hover:bg-gray-200 hover:text-gray-900 rounded-lg text-sm p-1.5 ml-auto inline-flex items-center dark:hover:bg-gray-800 dark:hover:text-white"
                         data-modal-toggle="filterModal">
@@ -212,7 +213,6 @@
                     </button>
                 </div>
                 <form class="px-6 pb-4 space-y-6 lg:px-8 sm:pb-6 xl:pb-8" action="#">
-                    <h3 class="text-xl font-medium text-gray-900 dark:text-white">Filters</h3>
                     <ul class="py-1">
                         <li>
                             <div class="flex items-center mb-4">
@@ -253,7 +253,7 @@
     <!-- ======START CONTACT SECTION ======  -->
     <div class="flex flex-col pt-5 ">
         <div class="-my-2 overflow-x-auto sm:-msx-6 lg:-msx-8">
-            <div class="py-2 align-middle inline-block min-w-full sm:px-6 lg:px-8">
+            <div class="py-2 align-middle inline-block min-w-full  md:px-10">
                 <div class="shadow overflow-hidden border-b border-gray-200 sm:rounded-lg">
                     <table class="min-w-full divide-y divide-gray-200">
                         <thead class="bg-gray-50">
@@ -263,7 +263,7 @@
                                     Name
                                 </th>
                                 <th scope="col"
-                                    class="px-6 py-3 text-left text-xs font-medium text-gray-500 uppercase tracking-wider hidden md:block">
+                                    class="px-6 py-3 text-left text-xs font-medium text-gray-500 uppercase tracking-wider hidden md:table-cell">
                                     Description
                                 </th>
                                 <th scope="col"
@@ -288,7 +288,7 @@
                                         </div>
                                     </div>
                                 </td>
-                                <td class="px-6 py-4 whitespace-nowrap hidden md:block">
+                                <td class="px-6 py-4 whitespace-nowrap hidden md:table-cell ">
                                     <div class="text-sm text-gray-900 group-hover:text-white">Regional Paradigm
                                         Technician</div>
                                 </td>
@@ -314,7 +314,7 @@
                                         </div>
                                     </div>
                                 </td>
-                                <td class="px-6 py-4 whitespace-nowrap hidden md:block">
+                                <td class="px-6 py-4 whitespace-nowrap hidden md:table-cell">
                                     <div class="text-sm text-gray-900 group-hover:text-white">Regional Paradigm
                                         Technician</div>
                                 </td>
@@ -340,7 +340,7 @@
                                         </div>
                                     </div>
                                 </td>
-                                <td class="px-6 py-4 whitespace-nowrap hidden md:block">
+                                <td class="px-6 py-4 whitespace-nowrap hidden md:table-cell">
                                     <div class="text-sm text-gray-900 group-hover:text-white">Regional Paradigm
                                         Technician</div>
                                 </td>
@@ -366,7 +366,7 @@
                                         </div>
                                     </div>
                                 </td>
-                                <td class="px-6 py-4 whitespace-nowrap hidden md:block">
+                                <td class="px-6 py-4 whitespace-nowrap hidden md:table-cell">
                                     <div class="text-sm text-gray-900 group-hover:text-white">Regional Paradigm
                                         Technician</div>
                                 </td>
@@ -392,7 +392,7 @@
                                         </div>
                                     </div>
                                 </td>
-                                <td class="px-6 py-4 whitespace-nowrap hidden md:block">
+                                <td class="px-6 py-4 whitespace-nowrap hidden md:table-cell">
                                     <div class="text-sm text-gray-900 group-hover:text-white">Regional Paradigm
                                         Technician</div>
                                 </td>
