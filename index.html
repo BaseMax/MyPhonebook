@@ -69,10 +69,10 @@
                 Contacts
             </p>
         </div>
-        <div class="flex justify-between flesx-wrap flex-col md:flex-row  md:flex-nowrap items-center">
-            <div class="flex justify-center flsex-wrap md:flex-nowrap flex-col md:flex-row  gap-3 items-center">
+        <div class="grid overflow-hidden grid-cols-none grid-rows-none gap-y-3 justify-center md:flex md:justify-between">
+            <!-- <div class="flex justify-center flsex-wrap md:flex-nowrap flex-col md:flex-row  gap-3 items-center"> -->
 
-                <div class="relative mx-auto  text-gray-600">
+                <div class="relative msx-auto  text-gray-600 md:row-start-1 col-span-10">
                     <input
                         class=" border-gray-300 bg-white h-10  px-5 pr-16 rounded-lg text-sm focus:outline-none"
                         type="search" name="search" placeholder="Search">
@@ -86,10 +86,10 @@
                         </svg>
                     </button>
                 </div>
-                <div class="flex justify-center ">
+                <div class="flex justify-center row-start-2 md:row-start-1 col-span-5 md:mr-auto md:ml-3">
 
                     <button data-modal-toggle="filterModal"
-                        class="flex group items-center relative z-10 md:w-32   justify-center   focus:outline-none  focus:bg-blue-500  focus:text-white text-black border border-gray-300 text-center md:py-2 md:px-4 p-1 w-28  rounded    font-medium text-sm "
+                        class="flex group items-center relative z-10 md:w-32   justify-center   focus:outline-none  focus:bg-blue-500  focus:text-white text-black border border-gray-300 text-center md:py-2 md:px-4 p-1 w-28  rounded-lg    font-medium text-sm "
                         type="button"><svg xmlns="http://www.w3.org/2000/svg" class="h-4 w-4 group-focus:fill-white"
                             viewBox="0 0 24 24">
                             <path
@@ -98,12 +98,12 @@
                         <span class="pl-2">Filter</span></button>
                 </div>
 
-            </div>
+            <!-- </div> -->
 
-            <div class="pt-2 md:p-0">
+            <div class="pts-2 md:p-0 flex justify-center row-start-2 md:row-start-1 col-span-5 ">
 
                 <button
-                    class="justify-center flex items-center bg-blue-500 hover:bg-blue-600 focus:bg-blue-600  md:w-32  text-white whitespace-nowrap  text-center border md:py-2 md:px-4 p-1 w-28  rounded  text-sm"
+                    class="justify-center flex items-center bg-blue-500 hover:bg-blue-600 focus:bg-blue-600  md:w-32  text-white whitespace-nowrap  text-center border md:py-2 md:px-4 p-1 w-28  rounded-lg  text-sm"
                     data-modal-toggle="addNewModel">
                     <svg class="h-4 w-4 fill-white" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24">
                         <path
