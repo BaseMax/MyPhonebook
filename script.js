@@ -1,3 +1,8 @@
+// Const
+const addNewBtn = document.getElementById("addNew");
+const closeModalBtn = document.getElementsByClassName("addNewModalClose");
+
+// Functions
 const showDialog = () => {
   toggleModal("addNewModel", true);
   const scrollY = document.documentElement.style.getPropertyValue("--scroll-y");
@@ -5,6 +10,7 @@ const showDialog = () => {
   body.style.position = "fixed";
   body.style.top = `-${scrollY}`;
 };
+
 const closeDialog = () => {
   const body = document.body;
   const scrollY = body.style.top;
@@ -13,13 +19,14 @@ const closeDialog = () => {
   window.scrollTo(0, parseInt(scrollY || "0") * -1);
   toggleModal("addNewModel", false);
 };
-const addNewBtn = document.getElementById("addNew");
-const closeModalBtn = document.getElementsByClassName("addNewModalClose");
+
+// Events
 for (let item of closeModalBtn) {
   item.addEventListener("click", () => {
     closeDialog();
   });
 }
+
 addNewBtn.addEventListener("click", () => {
   showDialog();
 });
