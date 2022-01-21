@@ -141,28 +141,33 @@
                 </div>
                 <!-- Modal body -->
                 <div class="p-6 space-y-6">
-                    <form class="w-full">
+                    <form class="w-full" id="contactForm">
                         <div class="flex flex-wrap -mx-3 mb-6">
                             <div class="w-full md:w-1/2 px-3 mb-6 md:mb-0">
                                 <label for="grid-firstname" class="block mb-2 text-sm font-medium text-gray-900">First
                                     Name</label>
-                                <input type="text" placeholder="John" id="grid-phonenumber"
+                                <input type="text" placeholder="John" id="firstname"
                                     class="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5">
-                                <!-- <p class="text-red-500 text-xs italic">Please fill out this field.</p> -->
+                                    <p class="hidden mt-2 text-sm text-red-600 "></span> Please enter the firstname!</p>
+
                             </div>
                             <div class="w-full md:w-1/2 px-3">
                                 <label for="grid-lastname" class="block mb-2 text-sm font-medium text-gray-900">Last
                                     Name</label>
-                                <input type="text" placeholder="Doe" id="grid-phonenumber"
+                                <input type="text" placeholder="Doe" id="lastname"
                                     class="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5">
+                                    <p class=" hidden mt-2 text-sm text-red-600 "> Please enter the lastname!</p>
+
                             </div>
                         </div>
                         <div class="flex flex-wrap -mx-3 mb-6">
                             <div class="w-full px-3">
                                 <label for="grid-password" class="block mb-2 text-sm font-medium text-gray-900">Phone
                                     Number</label>
-                                <input type="text" placeholder="+xx-xxx-xxx-xxxx" id="grid-phonenumber"
+                                <input type="text" placeholder="123-456-7890" id="phonenumber"
                                     class="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5">
+                                    <p class="hidden mt-2 text-sm text-red-600 "> Please enter the phonenumber!</p>
+
                             </div>
                         </div>
                         <div class="flex flex-wrap -mx-3 mb-2">
@@ -184,7 +189,8 @@
                     <button  type="button"
                         class="addNewModalClose text-gray-500 bg-white hover:bg-gray-100 focus:ring-4 focus:ring-gray-300 rounded-lg border border-gray-200 text-sm font-medium px-5 py-2.5 hover:text-gray-900 focus:z-10 ">Cancel</button>
                     <button  type="button"
-                        class="addNewModalClose text-white bg-blue-700 hover:bg-blue-800 focus:ring-4 focus:ring-blue-300 font-medium rounded-lg text-sm px-5 py-2.5 text-center ">
+                        id="contactFormSubmit"
+                        class="addNewsModalClose text-white bg-blue-700 hover:bg-blue-800 focus:ring-4 focus:ring-blue-300 font-medium rounded-lg text-sm px-5 py-2.5 text-center ">
                         Add</button>
                 </div>
             </div>
@@ -424,12 +430,12 @@
                     <polyline points="15 18 9 12 15 6"></polyline>
                 </svg>
             </div>
-            <div class="flex h-12 font-medium rounded-full bg-white">
+            <div class="flex h-12 font-medium rounded-full bg-white md:space-x-1" id="pagesNumber">
                 <div
-                    class="w-12 md:flex justify-center items-center hidden  cursor-pointer leading-5 transition duration-150 ease-in  rounded-full hover:bg-blue-500 hover:text-white focus:bg-blue-500 focus:text-white  ">
+                    class="w-12 md:flex justify-center items-center hidden  cursor-pointer leading-5 transition duration-150 ease-in  rounded-full hover:bg-blue-500 hover:text-white focus:bg-blue-500 focus:text-white active:bg-blue-500  ">
                     1</div>
                 <div
-                    class="w-12 md:flex justify-center items-center hidden  cursor-pointer leading-5 transition duration-150 ease-in  rounded-full hover:bg-blue-500 hover:text-white focus:bg-blue-500 focus:text-white ">
+                    class="w-12 md:flex justify-center items-center hidden  cursor-pointer leading-5 transition duration-150 ease-in  rounded-full hover:bg-blue-500 hover:text-white focus:bg-blue-500 focus:text-white active:bg-blue-500 ">
                     2</div>
                 <div
                     class="w-12 md:flex justify-center items-center hidden  cursor-pointer leading-5 transition duration-150 ease-in  rounded-full hover:bg-blue-500 hover:text-white focus:bg-blue-500 focus:text-white  ">
