@@ -24,6 +24,7 @@ const showDialog = (modal) => {
   document.body.style.width = "100%";
   document.body.style.top = `-${scrollY}`;
 };
+
 const closeDialog = (modal) => {
   const scrollY = document.body.style.top;
   window.scrollTo(0, parseInt(scrollY || "0") * -1);
@@ -54,6 +55,7 @@ for (let item of closeAddnewModal) {
     closeDialog("addNewModel");
   });
 }
+
 for (let item of closeFilterModalBtn) {
   item.addEventListener("click", (e) => {
     e.preventDefault();

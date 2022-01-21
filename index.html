@@ -74,9 +74,9 @@
 
                 <div class="relative msx-auto  text-gray-600 md:row-start-1 col-span-10">
                     <input
-                        class=" border-gray-300 bg-white h-10  px-5 pr-16 rounded-lg text-sm focus:outline-none"
+                        class=" border-gray-300 bg-white h-10  px-5 pr-16 rounded-lg text-sm focus:outline-none focus:ring-0"
                         type="search" name="search" placeholder="Search">
-                    <button type="submit" class="absolute right-0 top-0 mt-3 mr-4">
+                    <button type="submit" class="absolute right-0 top-0 mt-3 mr-4 ">
                         <svg class="text-gray-600 h-4 w-4 fill-current" xmlns="http://www.w3.org/2000/svg"
                             xmlns:xlink="http://www.w3.org/1999/xlink" version="1.1" id="Capa_1" x="0px" y="0px"
                             viewBox="0 0 56.966 56.966" style="enable-background:new 0 0 56.966 56.966;"
@@ -90,7 +90,7 @@
 
                     <button data-modal-toggle="filterModal"
                         id="filterBtn"
-                        class="flex group items-center relative z-10 md:w-32   justify-center   focus:outline-none  focus:bg-blue-500  focus:text-white text-black border border-gray-300 text-center md:py-2 md:px-4 p-1 w-28  rounded-lg    font-medium text-sm "
+                        class="flex group items-center relative z-10 md:w-32   justify-center   focus:outline-none  focus:bg-blue-500  focus:text-white text-black border border-gray-300 text-center md:py-2 md:px-4 p-1 w-28  rounded-lg    font-medium text-sm   focus:ring-0 "
                         type="button"><svg xmlns="http://www.w3.org/2000/svg" class="h-4 w-4 group-focus:fill-white"
                             viewBox="0 0 24 24">
                             <path
@@ -104,7 +104,7 @@
             <div class="pts-2 md:p-0 flex justify-center row-start-2 md:row-start-1 col-span-5 ">
 
                 <button id="addNew"
-                    class="justify-center flex items-center bg-blue-500 hover:bg-blue-600 focus:bg-blue-600  md:w-32  text-white whitespace-nowrap  text-center border md:py-2 md:px-4 p-1 w-28  rounded-lg  text-sm"
+                    class="justify-center flex items-center bg-blue-500 hover:bg-blue-600 focus:bg-blue-600  md:w-32  text-white whitespace-nowrap  text-center border md:py-2 md:px-4 p-1 w-28  rounded-lg  text-sm focus:outline-none focus:border-none focus:ring-0"
                     >
                     <svg class="h-4 w-4 fill-white" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24">
                         <path
@@ -120,7 +120,7 @@
 
     <!-- ======START ADD NEW MODAL SECTION ======  -->
     <div id="addNewModel" aria-hidden="true"
-        class="hidden main-modal animated fadeIn faster overflow-y-auto overflow-x-hidden fixed right-0 left-0 top-4 z-50 justify-center items-center h-modal md:h-full md:inset-0">
+        class="hidden main-modal animated fadeIn faster overflow-y-scroll overflow-x-hidden fixed right-0 left-0 top-4 z-50 justify-center items-center h-modal md:h-full md:inset-0">
         <div class="relative px-4 w-full max-w-2xl h-full md:h-auto">
             <!-- Modal content -->
             <div class="relative bg-white rounded-lg shadow ">
