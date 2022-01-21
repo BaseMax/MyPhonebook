@@ -1,7 +1,4 @@
 // Const
-let addNewModelOpen = false;   //Indicates the state (open/close) of Add New Model
-let filterModelOpen = false;   //Indicates the state (open/close) of Filter Model
-let currentPage = null;   //Indicate pagination of the current table page
 const addNewBtn = document.getElementById("addNew");
 const filterBtn = document.getElementById("filterBtn");
 const closeAddnewModal = document.getElementsByClassName("addNewModalClose");
@@ -14,6 +11,9 @@ const filterModal = document.getElementById("filterModal");
 const addNewModel = document.getElementById("addNewModel");
 const pagesNumber = document.getElementById("pagesNumber");
 const contactForm = document.getElementById("contactForm");
+let addNewModelOpen = false;   //Indicates the state (open/close) of Add New Model
+let filterModelOpen = false;   //Indicates the state (open/close) of Filter Model
+let currentPage = pagesNumber.firstElementChild;  //Indicate pagination of the current table page
 
 // Functions
 const showDialog = (modal) => {
