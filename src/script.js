@@ -1,7 +1,7 @@
 // Const
-let modal1IsOpen = false;
-let modal2IsOpen = false;
-let currentPage = null;
+let addNewModelOpen = false;   //Indicates the state (open/close) of Add New Model
+let filterModelOpen = false;   //Indicates the state (open/close) of Filter Model
+let currentPage = null;   //Indicate pagination of the current table page
 const addNewBtn = document.getElementById("addNew");
 const filterBtn = document.getElementById("filterBtn");
 const closeAddnewModal = document.getElementsByClassName("addNewModalClose");
@@ -10,7 +10,8 @@ const firstname = document.getElementById("firstname");
 const lastname = document.getElementById("lastname");
 const phonenumber = document.getElementById("phonenumber");
 const contactFormSubmit = document.getElementById("contactFormSubmit");
-const modall = document.querySelectorAll(".main-modal");
+const filterModal = document.getElementById("filterModal");
+const addNewModel = document.getElementById("addNewModel");
 const pagesNumber = document.getElementById("pagesNumber");
 const contactForm = document.getElementById("contactForm");
 
@@ -18,13 +19,13 @@ const contactForm = document.getElementById("contactForm");
 const showDialog = (modal) => {
   toggleModal(modal, true);
   if (modal === "addNewModel") {
-    modal1IsOpen = true;
-    modall[0].classList.remove("fadeOut");
-    modall[0].classList.add("fadeIn");
+    addNewModelOpen = true;
+    addNewModel.classList.remove("fadeOut");
+    addNewModel.classList.add("fadeIn");
   } else {
-    modal2IsOpen = true;
-    modall[1].classList.remove("fadeOut");
-    modall[1].classList.add("fadeIn");
+    filterModelOpen = true;
+    filterModal.classList.remove("fadeOut");
+    filterModal.classList.add("fadeIn");
   }
   const scrollY = document.documentElement.style.getPropertyValue("--scroll-y");
   document.body.style.overflow = "hidden";
@@ -36,16 +37,16 @@ const closeDialog = (modal) => {
   const scrollY = document.body.style.top;
   window.scrollTo(0, parseInt(scrollY || "0") * -1);
   if (modal === "addNewModel") {
-    modal1IsOpen = false;
-    modall[0].classList.remove("fadeIn");
-    modall[0].classList.add("fadeOut");
+    addNewModelOpen = false;
+    addNewModel.classList.remove("fadeIn");
+    addNewModel.classList.add("fadeOut");
     setTimeout(() => {
       toggleModal(modal, false);
     }, 500);
   } else {
-    modal2IsOpen = false;
-    modall[1].classList.remove("fadeIn");
-    modall[1].classList.add("fadeOut");
+    filterModelOpen = false;
+    filterModal.classList.remove("fadeIn");
+    filterModal.classList.add("fadeOut");
     setTimeout(() => {
       toggleModal(modal, false);
     }, 500);
@@ -155,15 +156,15 @@ window.addEventListener("scroll", () => {
 });
 
 document.addEventListener("keydown", (e) => {
-  if (e.keyCode == 27 && modal1IsOpen === true) {
+  if (e.keyCode == 27 && addNewModelOpen === true) {
     closeDialog("addNewModel");
     clearWarning();
   }
-  if (e.keyCode == 13 && modal1IsOpen === true && checkValidation(firstname, lastname, phonenumber)) {
+  if (e.keyCode == 13 && addNewModelOpen === true && checkValidation(firstname, lastname, phonenumber)) {
       contactForm.reset();
       closeDialog("addNewModel");
   }
-  if (e.keyCode == 27 && modal2IsOpen === true) {
+  if (e.keyCode == 27 && filterModelOpen === true) {
     closeDialog("filterModal");
     closeDialog("filterModal");
   }

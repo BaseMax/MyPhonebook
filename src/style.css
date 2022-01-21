@@ -1,0 +1,51 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+* { -webkit-tap-highlight-color: rgba(0,0,0,0); }
+@layer base {
+    button {
+      @apply focus:outline-none focus:ring;
+    }
+  }
+
+  .animated {
+    -webkit-animation-duration: .6s;
+    animation-duration: .6s;
+    -webkit-animation-fill-mode: both;
+    animation-fill-mode: both;
+  }
+
+  .animated.faster {
+    -webkit-animation-duration: 600ms;
+    animation-duration: 600ms;
+  }
+
+  .fadeIn {
+    -webkit-animation-name: fadeIn;
+    animation-name: fadeIn;
+  }
+
+  .fadeOut {
+    -webkit-animation-name: fadeOut;
+    animation-name: fadeOut;
+  }
+
+  @keyframes fadeIn {
+    from {
+      opacity: 0;
+    }
+
+    to {
+      opacity: 1;
+    }
+  }
+
+  @keyframes fadeOut {
+    from {
+      opacity: 1;
+    }
+
+    to {
+      opacity: 0;
+    }
+  }
