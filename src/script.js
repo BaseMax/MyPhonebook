@@ -34,6 +34,7 @@ const add_contact = (first_name, last_name, phone, description) => {
     description: description,
     phone: phone,
   });
+  render_contacts();
 };
 
 const render_contacts = () => {
