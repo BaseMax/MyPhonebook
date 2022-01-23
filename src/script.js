@@ -17,7 +17,8 @@ const contactForm = document.getElementById("contactForm");
 
 let addNewModelOpen = false;   //Indicates the state (open/close) of Add New Model
 let filterModelOpen = false;   //Indicates the state (open/close) of Filter Model
-let currentPage = pagesNumber.firstElementChild;  //Indicate pagination of the current table page
+if(pagesNumber)
+  let currentPage = pagesNumber.firstElementChild;  //Indicate pagination of the current table page
 
 // Init database
 var db = new Dexie("MyFriendDB");
@@ -236,14 +237,15 @@ window.addEventListener("keydown", (e) => {
   }
 });
 
-pagesNumber.addEventListener("click", (e) => {
-  const page = e.target;
-  if (page !== currentPage && currentPage) {
-    paginationEffect(currentPage);
-  }
-  currentPage = page;
-  paginationEffect(page);
-});
+if(pagesNumber)
+  pagesNumber.addEventListener("click", (e) => {
+    const page = e.target;
+    if (page !== currentPage && currentPage) {
+      paginationEffect(currentPage);
+    }
+    currentPage = page;
+    paginationEffect(page);
+  });
 
 contactFormSubmit.addEventListener("click", (e) => {
   let passed = checkValidation(firstname, lastname, phonenumber);
