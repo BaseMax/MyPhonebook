@@ -1,4 +1,6 @@
 // Const
+const contacts = document.querySelector("#contacts");
+const searchField = document.querySelector("#searchField");
 const addNewBtn = document.getElementById("addNew");
 const filterBtn = document.getElementById("filterBtn");
 const closeAddnewModal = document.getElementsByClassName("addNewModalClose");
@@ -6,16 +8,74 @@ const closeFilterModalBtn = document.getElementsByClassName("filterModalClose");
 const firstname = document.getElementById("firstname");
 const lastname = document.getElementById("lastname");
 const phonenumber = document.getElementById("phonenumber");
+const description = document.getElementById("grid-description");
 const contactFormSubmit = document.getElementById("contactFormSubmit");
 const filterModal = document.getElementById("filterModal");
 const addNewModel = document.getElementById("addNewModel");
 const pagesNumber = document.getElementById("pagesNumber");
 const contactForm = document.getElementById("contactForm");
+
 let addNewModelOpen = false;   //Indicates the state (open/close) of Add New Model
 let filterModelOpen = false;   //Indicates the state (open/close) of Filter Model
 let currentPage = pagesNumber.firstElementChild;  //Indicate pagination of the current table page
 
+// Init database
+var db = new Dexie("MyFriendDB");
+db.version(1).stores({
+  contacts: '++id, first_name, last_name, &phone' // description not need indexing.
+});
+console.log(`Using Dexie v${Dexie.semVer}`);
+
 // Functions
+const add_contact = (first_name, last_name, phone, description) => {
+  db.contacts.put({
+    first_name: first_name,
+    last_name: last_name,
+    description: description,
+    phone: phone,
+  });
+};
+
+const render_contacts = () => {
+  contacts.innerHTML = "";
+  let list = db.contacts;
+  searchField.value = searchField.value.trim();
+  if(searchField.value !== "") {
+    list = list.filter(x => {
+      if(x.first_name.toLowerCase().includes(searchField.value.toLowerCase()) || x.last_name.toLowerCase().includes(searchField.value.toLowerCase()) || x.description.toLowerCase().includes(searchField.value.toLowerCase()) || x.phone.toLowerCase().includes(searchField.value.toLowerCase()))
+        return true;
+      return false;
+    });
+  }
+
+	list.each(item => {
+    contacts.innerHTML += `<tr class="hover:bg-blue-500 hover:text-white group">
+    <td class="sm:px-6 sm:py-4 px-4 py-5">
+        <div class="flex items-center">
+            <div class="flex-shrink-0 h-10 w-10">
+                <img class="h-10 w-10 rounded-full"
+                    src="https://images.unsplash.com/photo-1494790108377-be9c29b29330?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=facearea&facepad=4&w=256&h=256&q=60"
+                    alt="">
+            </div>
+            <div class="ml-4">
+                <div class="text-sm font-medium text-gray-900 group-hover:text-white">
+                  ${item.first_name} ${item.last_name}
+                </div>
+            </div>
+        </div>
+    </td>
+    <td class="px-6 py-4 whitespace-nowrap hidden md:table-cell ">
+        <div class="text-sm text-gray-900 group-hover:text-white">${item.description}</div>
+    </td>
+    <td class="px-6 py-4 whitespace-nowrap">
+        <span class="px-2 inline-flex ">
+            ${item.phone}
+        </span>
+    </td>
+
+</tr>`;
+  });
+}
 const showDialog = (modal) => {
   toggleModal(modal, true);
   if (modal === "addNewModel") {
@@ -188,9 +248,19 @@ pagesNumber.addEventListener("click", (e) => {
 contactFormSubmit.addEventListener("click", (e) => {
   let passed = checkValidation(firstname, lastname, phonenumber);
   if (passed) {
+    add_contact(firstname.value, lastname.value, phonenumber.value, description.value);
     contactForm.reset();
     closeDialog("addNewModel");
   } else {
     e.preventDefault();
   }
+});
+
+searchField.addEventListener("keydown", (e) => {
+  if(e.key === 'Enter') {}
+  render_contacts();
+});
+
+window.addEventListener("load", () => {
+  render_contacts();
 });

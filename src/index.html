@@ -12,7 +12,6 @@
         rel="stylesheet">
     <link rel="stylesheet" href="https://unpkg.com/@themesberg/flowbite@1.3.0/dist/flowbite.min.css" />
     <link rel="stylesheet" href="../dist/style.css">
-
     <title>My PhoneBook</title>
 </head>
 
@@ -73,7 +72,7 @@
             <!-- <div class="flex justify-center flsex-wrap md:flex-nowrap flex-col md:flex-row  gap-3 items-center"> -->
 
                 <div class="relative msx-auto  text-gray-600 md:row-start-1 col-span-10">
-                    <input
+                    <input id="searchField"
                         class=" border-gray-300 bg-white h-10  px-5 pr-16 rounded-lg text-sm focus:outline-none focus:ring-0"
                         type="search" name="search" placeholder="Search">
                     <button type="submit" class="absolute right-0 top-0 mt-3 mr-4 ">
@@ -279,8 +278,9 @@
                                 </th>
                             </tr>
                         </thead>
-                        <tbody class="bg-white divide-y divide-gray-200">
-                            <tr class="hover:bg-blue-500 hover:text-white group">
+                        <tbody id="contacts" class="bg-white divide-y divide-gray-200">
+
+                            <!-- <tr class="hover:bg-blue-500 hover:text-white group">
                                 <td class="sm:px-6 sm:py-4 px-4 py-5">
                                     <div class="flex items-center">
                                         <div class="flex-shrink-0 h-10 w-10">
@@ -305,111 +305,7 @@
                                     </span>
                                 </td>
 
-                            </tr>
-                            <tr class="hover:bg-blue-500 hover:text-white group">
-                                <td class="sm:px-6 sm:py-4 px-4 py-5">
-                                    <div class="flex items-center">
-                                        <div class="flex-shrink-0 h-10 w-10">
-                                            <img class="h-10 w-10 rounded-full"
-                                                src="https://images.unsplash.com/photo-1494790108377-be9c29b29330?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=facearea&facepad=4&w=256&h=256&q=60"
-                                                alt="">
-                                        </div>
-                                        <div class="ml-4">
-                                            <div class="text-sm font-medium text-gray-900 group-hover:text-white">
-                                                Jane Cooper
-                                            </div>
-                                        </div>
-                                    </div>
-                                </td>
-                                <td class="px-6 py-4 whitespace-nowrap hidden md:table-cell">
-                                    <div class="text-sm text-gray-900 group-hover:text-white">Regional Paradigm
-                                        Technician</div>
-                                </td>
-                                <td class="px-6 py-4 whitespace-nowrap">
-                                    <span class="px-2 inline-flex ">
-                                        +201774428312
-                                    </span>
-                                </td>
-
-                            </tr>
-                            <tr class="hover:bg-blue-500 hover:text-white group">
-                                <td class="sm:px-6 sm:py-4 px-4 py-5">
-                                    <div class="flex items-center">
-                                        <div class="flex-shrink-0 h-10 w-10">
-                                            <img class="h-10 w-10 rounded-full"
-                                                src="https://images.unsplash.com/photo-1494790108377-be9c29b29330?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=facearea&facepad=4&w=256&h=256&q=60"
-                                                alt="">
-                                        </div>
-                                        <div class="ml-4">
-                                            <div class="text-sm font-medium text-gray-900 group-hover:text-white">
-                                                Jane Cooper
-                                            </div>
-                                        </div>
-                                    </div>
-                                </td>
-                                <td class="px-6 py-4 whitespace-nowrap hidden md:table-cell">
-                                    <div class="text-sm text-gray-900 group-hover:text-white">Regional Paradigm
-                                        Technician</div>
-                                </td>
-                                <td class="px-6 py-4 whitespace-nowrap">
-                                    <span class="px-2 inline-flex ">
-                                        +201774428312
-                                    </span>
-                                </td>
-
-                            </tr>
-                            <tr class="hover:bg-blue-500 hover:text-white group">
-                                <td class="sm:px-6 sm:py-4 px-4 py-5">
-                                    <div class="flex items-center">
-                                        <div class="flex-shrink-0 h-10 w-10">
-                                            <img class="h-10 w-10 rounded-full"
-                                                src="https://images.unsplash.com/photo-1494790108377-be9c29b29330?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=facearea&facepad=4&w=256&h=256&q=60"
-                                                alt="">
-                                        </div>
-                                        <div class="ml-4">
-                                            <div class="text-sm font-medium text-gray-900 group-hover:text-white">
-                                                Jane Cooper
-                                            </div>
-                                        </div>
-                                    </div>
-                                </td>
-                                <td class="px-6 py-4 whitespace-nowrap hidden md:table-cell">
-                                    <div class="text-sm text-gray-900 group-hover:text-white">Regional Paradigm
-                                        Technician</div>
-                                </td>
-                                <td class="px-6 py-4 whitespace-nowrap">
-                                    <span class="px-2 inline-flex ">
-                                        +201774428312
-                                    </span>
-                                </td>
-
-                            </tr>
-                            <tr class="hover:bg-blue-500 hover:text-white group">
-                                <td class="sm:px-6 sm:py-4 px-4 py-5">
-                                    <div class="flex items-center">
-                                        <div class="flex-shrink-0 h-10 w-10">
-                                            <img class="h-10 w-10 rounded-full"
-                                                src="https://images.unsplash.com/photo-1494790108377-be9c29b29330?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=facearea&facepad=4&w=256&h=256&q=60"
-                                                alt="">
-                                        </div>
-                                        <div class="ml-4">
-                                            <div class="text-sm font-medium text-gray-900 group-hover:text-white">
-                                                Jane Cooper
-                                            </div>
-                                        </div>
-                                    </div>
-                                </td>
-                                <td class="px-6 py-4 whitespace-nowrap hidden md:table-cell">
-                                    <div class="text-sm text-gray-900 group-hover:text-white">Regional Paradigm
-                                        Technician</div>
-                                </td>
-                                <td class="px-6 py-4 whitespace-nowrap">
-                                    <span class="px-2 inline-flex ">
-                                        +201774428312
-                                    </span>
-                                </td>
-
-                            </tr>
+                            </tr> -->
 
 
                         </tbody>
@@ -420,6 +316,7 @@
     </div>
     <!-- ======END CONTACT SECTION ======  -->
     <!-- ======START PAGINATION ======  -->
+    <!--
     <div class="flex flex-col items-center my-12">
         <div class="flex text-gray-700">
             <div
@@ -466,9 +363,11 @@
             </div>
         </div>
     </div>
+    -->
     <!-- ======END PAGINATION ======  -->
-    <script src="https://unpkg.com/@themesberg/flowbite@1.2.0/dist/flowbite.bundle.js"></script>
-    <script src="./script.js"></script>
+    <script type="text/javascript" src="https://unpkg.com/@themesberg/flowbite@1.2.0/dist/flowbite.bundle.js"></script>
+    <script type="text/javascript" src="dexie.min.js"></script>
+    <script type="text/javascript" src="./script.js"></script>
 
 </body>
 
