@@ -21,6 +21,6 @@ The easiest way to use IndexedDB. A lightweight, minimalistic wrapper that provi
 ## Authors
 
 - **HTML/CSS:** Muhab
-- **JS/Database:** Max Base
+- **JS:** Max Base
 
 © Copyright 2021, Max Base
