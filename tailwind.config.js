@@ -1,5 +1,8 @@
 module.exports = {
-  content: ["./src/**/*.{html,js}","./node_modules/@themesberg/flowbite/**/*.js"],
+  content: [
+    "./src/**/*.{html,js}",
+    "./node_modules/@themesberg/flowbite/**/*.js"
+  ],
   theme: {
     extend: {
       fontFamily: {
