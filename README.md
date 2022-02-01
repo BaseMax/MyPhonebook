@@ -1,6 +1,6 @@
 # My Phonebook (Dexie)
 
-MyPhonebook is a web-based phone book page with ability to add contacts and search betweens with internal browser database supporting (full cache), styled powered by TailwindCSS.
+MyPhonebook is a web-based phone book page with ability to add contacts and search betweens with internal browser database supporting (**IndexedDB** full cache), styled powered by TailwindCSS.
 
 **Demo:** https://basemax.github.io/MyPhonebook/src/
 
