@@ -14,7 +14,7 @@ const filterModal = document.getElementById("filterModal");
 const addNewModel = document.getElementById("addNewModel");
 // const pagesNumber = document.getElementById("pagesNumber");
 const contactForm = document.getElementById("contactForm");
-
+const toggleMenu = document.getElementById("toggleMenu");
 let addNewModelOpen = false;   //Indicates the state (open/close) of Add New Model
 let filterModelOpen = false;   //Indicates the state (open/close) of Filter Model
 // let currentPage = pagesNumber.firstElementChild;  //Indicate pagination of the current table page
@@ -265,3 +265,8 @@ searchField.addEventListener("keydown", (e) => {
 window.addEventListener("load", () => {
   render_contacts();
 });
+
+toggleMenu.addEventListener("click", () => {
+  toggleMenu.children[0].classList.toggle('hidden')
+  toggleMenu.children[1].classList.toggle('hidden')
+})

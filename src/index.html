@@ -27,11 +27,10 @@
                 </svg>
                 <span class="self-center  text-lg font-semibold whitespace-nowrap ">My PhoneBook</span>
             </a>
-            <button data-collapse-toggle="mobile-menu" type="button"
-                class="inline-flex items-center p-2 ml-3 text-sm text-gray-500 rounded-lg md:hidden hover:bg-gray-100 focus:outline-none focus:ring-2 focus:ring-gray-200 "
+            <button id="toggleMenu" data-collapse-toggle="mobile-menu" type="button"
+                class="inline-flex items-center p-2 ml-3 text-sm text-gray-500 rounded-lg md:hidden hover:bg-gray-100 focus:outline-none focus:ring-0 focus:ring-gray-200  "
                 aria-controls="mobile-menu-2" aria-expanded="false">
-                <span class="sr-only">Open main menu</span>
-                <svg class="w-6 h-6" fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg">
+                <svg class="w-6 h-6 " fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg">
                     <path fill-rule="evenodd"
                         d="M3 5a1 1 0 011-1h12a1 1 0 110 2H4a1 1 0 01-1-1zM3 10a1 1 0 011-1h12a1 1 0 110 2H4a1 1 0 01-1-1zM3 15a1 1 0 011-1h12a1 1 0 110 2H4a1 1 0 01-1-1z"
                         clip-rule="evenodd"></path>
@@ -42,15 +41,15 @@
                         clip-rule="evenodd"></path>
                 </svg>
             </button>
-            <div class="hidden w-full md:table-cell md:w-auto" id="mobile-menu">
+            <div class="hidden min-w-fit md:table-cell md:w-auto scale-up-center absolute md:static top-14 right-4 md:p-0 p-4 bg-gray-50 md:bg-transparent z-10" id="mobile-menu">
                 <ul class="flex flex-col mt-4 md:flex-row md:space-x-8 md:mt-0 md:text-sm md:font-medium">
-                    <li class="md:hover:bg-blue-500 md:hover:text-white hover:rounded  hover:bg-gray-100  p-2 group md:w-24 flex md:justify-center">
+                    <li class="md:hover:bg-blue-500 md:hover:text-white hover:rounded  hover:bg-blue-500  p-2 group md:w-24 flex md:justify-center">
                         <a href="#"
-                            class="block py-2 pr-4 pl-3 text-gray-600 md:group-hover:text-white">Home</a>
+                            class="block py-2 pr-4 pl-3 text-gray-600  group-hover:text-white">Home</a>
                     </li>
-                    <li class="md:hover:bg-blue-500 md:hover:text-white hover:rounded hover:bg-gray-100  p-2 group md:w-24 flex md:justify-center">
+                    <li class="md:hover:bg-blue-500 md:hover:text-white hover:rounded hover:bg-blue-500  p-2 group md:w-24 flex md:justify-center">
                         <a href="#"
-                            class="block py-2 pr-4 pl-3 text-gray-600 md:group-hover:text-white">Contacts</a>
+                            class="block py-2 pr-4 pl-3 text-gray-600 group-hover:text-white">Contacts</a>
                     </li>
 
 
